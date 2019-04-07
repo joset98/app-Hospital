@@ -14,7 +14,21 @@ class CreateOperationHistoriesTable extends Migration
     public function up()
     {
         Schema::create('operation_histories', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id');//ESTA TABLA es el resultrado
+                                        //de personal con servicio-operacion
+
+            $table->unsignedBigInteger('servicio_id');
+            $table->foreign('servicio_id')
+                        ->references('id')
+                        ->on('servicios');
+                        // ->onDelete('cascade');
+            
+            $table->unsignedBigInteger('personal_id');
+            $table->foreign('personal_id')
+                        ->references('id')
+                        ->on('personals');
+                        // ->onDelete('cascade');
+                        
             $table->timestamps();
         });
     }

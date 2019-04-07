@@ -15,6 +15,11 @@ class CreatePersonalsTable extends Migration
     {
         Schema::create('personals', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('dni');
+            $table->integer('phone');
+            $table->string('nombre');
+            $table->string('apellido');  
+            $table->string('tipo');
             $table->timestamps();
         });
     }

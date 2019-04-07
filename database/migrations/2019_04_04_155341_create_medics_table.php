@@ -15,6 +15,11 @@ class CreateMedicsTable extends Migration
     {
         Schema::create('medics', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('personal_id');
+            $table->foreign('personal_id')
+                        ->references('id')
+                        ->on('personals')
+                        ->onDelete('cascade');
             $table->timestamps();
         });
     }

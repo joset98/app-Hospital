@@ -15,6 +15,12 @@ class CreateDiagnosticsTable extends Migration
     {
         Schema::create('diagnostics', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('tipo_enfermedad');
+            $table->unsignedBigInteger('tratamiento_id');
+            $table->foreign('tratamiento_id')
+                        ->references('id')
+                        ->on('tratamientos');
+
             $table->timestamps();
         });
     }
