@@ -9,7 +9,7 @@
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="fonts/ionicons.min.css">
     <!-- Theme style -->
@@ -29,7 +29,9 @@
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
 
+    <script src="plugins/morris/morris.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -251,7 +253,7 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="plnatilla/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                  <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                   <span class="hidden-xs">{{ Auth::user()->name }}</span>
                 </a>
                 <ul class="dropdown-menu">
@@ -656,9 +658,8 @@
            immediately after the control sidebar -->
       <div class="control-sidebar-bg"></div>
     </div><!-- ./wrapper -->
-
+      
     <!-- jQuery 2.1.4 -->
-    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="plugins\jQueryUI/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -669,7 +670,7 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- Morris.js charts -->
     <script src="plugins/raphael-min.js"></script>
-    <script src="plugins/morris/morris.min.js"></script>
+    
     <!-- Sparkline -->
     <script src="plugins/sparkline/jquery.sparkline.min.js"></script>
     <!-- jvectormap -->

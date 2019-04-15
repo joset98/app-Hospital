@@ -124,7 +124,7 @@ $(function () {
 
   /* Morris.js Charts */
   // Sales chart
-  var area = new Morris.Area({
+  /*var area = new Morris.Area({
     element: 'revenue-chart',
     resize: true,
     data: [
