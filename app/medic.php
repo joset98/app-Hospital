@@ -15,7 +15,7 @@ class medic extends Model
 
     public function especialista(){
            
-        return $this->hasMany('especialista');
-        
+        return $this->hasOne('Especialista');
     }
+    
 }

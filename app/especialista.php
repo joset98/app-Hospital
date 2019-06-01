@@ -13,5 +13,11 @@ class especialista extends Model
         return $this->belongsTo('Medic');
        
     }
+
+    public function speciality(){
+
+        return $this->hasMany('Speciality');
+
+    }
     
 }

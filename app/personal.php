@@ -13,10 +13,13 @@ class personal extends Model
      *
      * @var array
      */
-    protected $fillable = [
-        'nombre'
-    ];
+    
 
+    public function operation_histories()
+    {
+        return $this->hasMany('operation_history');
+    }
+    
     //Personals->persona()
     public function persona(){
            
@@ -26,7 +29,7 @@ class personal extends Model
 
     public function medics(){
            
-        return $this->hasMany('Medic');
+        return $this->hasOne('Medic');
         
     }
 }
